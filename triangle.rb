@@ -14,7 +14,12 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  triangle_mapping = {0 => :scalene, 1 => :isosceles, 3 => :equilateral}
+  sum = 0
+  sum += 1 if a == b
+  sum += 1 if b == c
+  sum += 1 if a == c
+  return triangle_mapping[sum]
 end
 
 # Error class used in part 2.  No need to change this code.
